@@ -1,3 +1,3 @@
-# toggle_dark_mode
+# PORTFOLIO V2
 
-An example of a simple dark mode toggle.
+Second version of my portfolio.
