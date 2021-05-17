@@ -31,10 +31,14 @@ body {
     min-height: 100vh;
 }
 
+/* h1 {
+    font-size: 2rem;
+} */
 h2 {
     font-size: 2rem;
     font-weight: 900;
     margin-bottom: 1rem;
+    color: rgb(58, 57, 56);
 }
 
 p {
@@ -47,18 +51,100 @@ p {
 header {
     width: 100vw;
     height: 5vh;
-    background: rgb(47, 51, 59);
+    background: linear-gradient(30deg, rgb(80, 80, 80) 0%, rgb(58, 57, 56) 100%);
+}
+
+/* =========================================================================================
+    Hero
+========================================================================================= */
+#hero_container {
+    padding: 5vh 10vw;
+    background: linear-gradient(30deg, rgb(167, 167, 167) 0%, rgb(190, 190, 190) 100%);
 }
 
 .hero {
+    /* outline: 1px solid magenta; */
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: space-evenly;
     align-items: center;
-    width: 100%;
-    min-height: 20vh;
-    background: orange;
-    margin-bottom: 5vh;
+    width: 90vw;
+    height: 39vw;
+    /* min-height: 20vh; */
+    /* background: red; */
+    /* margin-bottom: 5vh; */
+    /* margin: 5vh 10vw; */
+    /* padding: 2vw; */
+    position: relative;
+    
+}
+
+#hero_img {
+    width: 20vw;
+    position: absolute;
+    top: -1vw;
+    left: 63vw;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 95% 100%, 0 74%);    /* Clip-path disable outline and box-shadow */
+}
+#hero_img_wrap {
+    filter: drop-shadow(-2px 3px 3px rgba(50, 50, 0, 0.5));     /* This way the shadow follows the path */
+}
+
+#hero_back {
+    width: 87vw;
+    height: 34vw;
+    /* background: rgb(36, 131, 115); */
+    background: linear-gradient(220deg, rgb(85, 192, 174) 0%, rgb(36, 131, 115) 100%);
+    /* background: linear-gradient(30deg, rgb(167, 167, 167) 0%, rgb(190, 190, 190) 100%); */
+    position: absolute;
+    top: 1vw;
+    left: 1vw;
+}
+
+#hero_hi {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 4vw;
+    
+    width: 90vw;
+    height: 35vw;
+    /* background: rgb(58, 57, 56); */
+    background: linear-gradient(30deg, rgb(80, 80, 80) 0%, rgb(58, 57, 56) 100%);
+    clip-path: polygon(0 0, 0% 100%, 100% 100%);
+    position: absolute;
+    top: 0vw;
+    left: 0vw;
+    font-size: 4vw;
+    color: white;
+}
+#hero_hi_wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: drop-shadow(2px -2px 3px rgba(50, 50, 0, 0.5));
+}
+#name {
+    /* font-size: 4vw; */
+    color: rgb(85, 192, 174);
+}
+
+/* =========================================================================================
+    Abstract
+========================================================================================= */
+#abstract {
+    width: 100vw;
+    background: linear-gradient(30deg, rgb(80, 80, 80) 0%, rgb(58, 57, 56) 100%);
+    /* margin-bottom: 7vh; */
+    padding: 5vh 10vw;
+    font-size: 1rem;
+    color: white;
+}
+#abstract > h1 {
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    color: rgb(85, 192, 174);
 }
 
 /* =========================================================================================
@@ -69,20 +155,41 @@ header {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    max-width: 90vw;
+    width: 100vw;
+    /* padding: 7vh; */
+    background: linear-gradient(30deg, rgb(167, 167, 167) 0%, rgb(190, 190, 190) 100%);
+}
+
+#titles_container {
+    width: 100vw;
+    padding: 5vh 10vw;
+}
+#projects_container_title {
+    font-size: 2rem;
+    font-weight: 900;
+    color: rgb(58, 57, 56);
+    margin-bottom: 0.5rem;
+}
+#projects_container_subtitle {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: rgb(27, 116, 101);
+    /* margin-bottom: 1rem; */
 }
 
 .project_card {
     /* outline: 1px solid magenta; */
-    border: 1px solid grey;
+    /* border: 1px solid grey; */
     /* border-radius: 10px; */
-    /* background: rgb(225, 227, 251); */
+    background: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    margin-bottom: 5vh;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.445);
+    width: 90vw;
+    margin-bottom: 7vh;
+    /* box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.445); */
+    filter: drop-shadow(-2px 3px 3px rgba(50, 50, 0, 0.5));
 }
 
 .project_img {
@@ -117,9 +224,34 @@ a {
     all: unset;
     margin: 0.5rem;
     padding: 0.5rem 1rem;
-    background: rgb(255, 196, 0);
+    background: linear-gradient(220deg, rgb(85, 192, 174) 0%, rgb(36, 131, 115) 100%);
     border-radius: 999px;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.445);
+    /* box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.445); */
+    filter: drop-shadow(-2px 3px 3px rgba(50, 50, 0, 0.5));
+    color: rgb(54, 54, 53);
+    font-weight: 700;
+}
+
+/* =========================================================================================
+    Contact me
+========================================================================================= */
+#contact_me {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    background: linear-gradient(30deg, rgb(80, 80, 80) 0%, rgb(58, 57, 56) 100%);
+    /* margin-bottom: 7vh; */
+    padding: 5vh 10vw;
+    font-size: 1rem;
+    color: white;
+}
+#contact_me > h1 {
+    font-size: 1.8rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    color: rgb(85, 192, 174);
 }
 
 /* =========================================================================================
@@ -128,5 +260,5 @@ a {
 footer {
     width: 100vw;
     height: 5vh;
-    background: rgb(47, 51, 59);
+    background: linear-gradient(30deg, rgb(80, 80, 80) 0%, rgb(58, 57, 56) 100%);
 }

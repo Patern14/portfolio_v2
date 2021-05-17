@@ -14,11 +14,36 @@
 <body>
     <header>HEADER</header>
 
-    <section class="hero">
-        <h1>Hi, I'm Patern</h1>
+    <section id="hero_container">
+        <div class="hero">
+            <div id="hero_back">
+                <div id="hero_img_wrap">
+                    <img src="images/portrait.png" alt="" id="hero_img">
+                </div>
+            </div>
+            <div id="hero_hi_wrap">
+                <div id="hero_hi">
+                    <h1>Hi,</h1>
+                    <h1>I'm <span id="name">Patern</span>,</h1>
+                    <h1>Web developer</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="abstract">
+        <h1>Who I am</h1>
+        <p>French web-developer, recently graduated, following an intensive one year course with internship. </p>
+        <br>
+        <p> Looking to put my technical skills and life experience to work in a team environment, interested in someone with a non standard professional path.</p>
     </section>
     
-    <div id="projects_container">
+    <section id="projects_container">
+        <div id="titles_container">
+            <h1 id="projects_container_title">My work</h1>
+            <h3 id="projects_container_subtitle">A selection of my range of work</h3>
+        </div>
+
         <div class="project_card">      <!-- Pokedex -->
             <div class="project_img_container">
                 <img src="images/pokedex/Details - 2021-05-01 102319.png" alt="" class="project_img">
@@ -114,7 +139,17 @@
             </div>
         </div> -->
 
-    </div>
+    </section>
+
+    <section id="contact_me">
+        <h1>Want to know more?</h1>
+        <p>French web-developer, recently graduated, following an intensive one year course with internship. </p>
+        <br>
+        <p> Looking to put my technical skills and life experience to work in a team environment, interested in someone with a non standard professional path.</p>
+        <a href="" class="project_link">Contact me</a>
+        <a href="" class="project_link">My Linkedin</a>
+        <a href="" class="project_github_link">My Github</a>
+    </section>
 
     <footer>FOOTER</footer>
 
