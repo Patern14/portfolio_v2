@@ -1,17 +1,23 @@
 /* =============================================================================
-    SUMMARY
+    SUMMARY 
 
-    Custom properties
+    Custom properties - Breakpoints for media queries: 0 => 700 => 1080+
 
     General styling
 
     Header
+        Nav
+        Nav toggle
+        Burger when open
+        Burger when closed
 
     Hero
 
     Abstract
 
     Project cards
+        Titles
+        Project cards
 
     Contact me
 
@@ -41,6 +47,7 @@
 /* =========================================================================================
     General styling
 ========================================================================================= */
+
 * {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
@@ -64,7 +71,16 @@ h2 {
 }
 
 p {
+    font-size: 1rem;
     line-height: 1.5;
+}
+@media (min-width: 700px) and (max-width: 1080px) {
+    h2 {
+        font-size: 3rem;
+    }
+    p {
+        font-size: 1.5rem;
+    }
 }
 
 /* =========================================================================================
@@ -74,6 +90,17 @@ header {
     width: 100vw;
     height: 6vh;
     background: var(--dark_gradient);
+}
+@media (min-width: 700px) and (max-width: 1080px) {
+    header {
+        background: magenta;
+    }
+}
+
+@media (min-width: 1081px) {
+    header {
+        background: chartreuse;
+    }
 }
 
 /* Nav ===================================================================== */
@@ -122,6 +149,7 @@ header {
     top: 0.8rem;
     z-index: 1000;
 }
+
 /* Burger when open ================================================== */
 .nav_open .nav {
     transform: translateX(0);
@@ -138,6 +166,7 @@ header {
 .nav_open .hamburger::after {
     opacity: 0;
 }
+
 /* Burger when closed ======================================================= */
 .hamburger {
     display: block;
@@ -242,6 +271,11 @@ header {
     margin-bottom: 1rem;
     color: var(--light_accent);
 }
+@media (min-width: 700px) and (max-width: 1080px) {
+    #abstract > h1 {
+        font-size: 3rem;
+    }
+}
 
 /* =========================================================================================
     Project cards
@@ -255,6 +289,7 @@ header {
     background: var(--light_gradient);
 }
 
+/* Titles ========================================================================= */
 #titles_container {
     width: 100vw;
     padding: 5vh 10vw;
@@ -270,7 +305,16 @@ header {
     font-weight: 700;
     color: var(--dark_accent);
 }
+@media (min-width: 700px) and (max-width: 1080px) {
+    #projects_container_title {
+        font-size: 3rem;
+    }
+    #projects_container_subtitle {
+        font-size: 2.2rem;
+    }
+}
 
+/* Project cards ================================================================ */
 .project_card {
     background: white;
     display: flex;
@@ -301,6 +345,8 @@ ul {
     flex-direction: column;
     align-items: flex-start;
     margin: 0.7rem;
+    line-height: 1.5;
+    font-size: 1rem;
 }
 
 .links_container {
@@ -313,13 +359,26 @@ a {
     all: unset;
     cursor: pointer;
     margin: 0.5rem;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.5rem;
     background: var(--accent_gradient);
     border-radius: 999px;
     /* box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.445); */
     filter: drop-shadow(-2px 3px 3px rgba(50, 50, 0, 0.5));
     color: var(--dark_grey);
+    font-size: 1rem;
     font-weight: 700;
+}
+@media (min-width: 700px) and (max-width: 1080px) {
+    .project_content {
+        padding: 2rem 3.5rem;
+    }
+    ul {
+        font-size: 1.5rem;
+    }
+    a {
+        font-size: 1.5rem;
+        margin: 1rem;
+    }
 }
 
 /* =========================================================================================
@@ -354,8 +413,13 @@ a {
 }
 .social_link {
     text-align: center;
-    width: calc(50% - 3rem);
+    width: calc(50% - 4rem);
     margin-bottom: 2vh;
+}
+@media (min-width: 700px) and (max-width: 1080px) {
+    .social_link {
+        width: calc(50% - 5rem);
+    }
 }
 
 /* =========================================================================================
@@ -373,8 +437,8 @@ footer > a {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 3rem;
-    height: 3rem;
-    padding: 0;
+    /* width: 3rem;
+    height: 3rem; */
+    padding: 1rem;
     border-radius: 999px;
 }
