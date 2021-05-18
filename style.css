@@ -24,12 +24,18 @@
 ========================================================================================= */
 :root {
     --light_grey: rgb(190, 190, 190);
-    --dark_grey: rgb(60, 60, 60);
     --light_gradient: linear-gradient(30deg, rgb(165, 165, 165) 0%, rgb(190, 190, 190) 100%);
+
+    --dark_grey: rgb(60, 60, 60);
     --dark_gradient: linear-gradient(30deg, rgb(80, 80, 80) 0%, rgb(60, 60, 60) 100%);
+
     --light_accent: rgb(85, 190, 175);
     --dark_accent: rgb(35, 130, 115);
     --accent_gradient: linear-gradient(220deg, rgb(85, 190, 175) 0%, rgb(35, 130, 115) 100%);
+
+    /* --light_accent: rgb(251, 116, 5);
+    --dark_accent: rgb(209, 94, 0);
+    --accent_gradient: linear-gradient(220deg, rgb(251, 116, 5) 0%, rgb(209, 94, 0) 100%); */
 }
 
 /* =========================================================================================
@@ -54,7 +60,7 @@ h2 {
     font-size: 2rem;
     font-weight: 900;
     margin-bottom: 1rem;
-    color: rgb(58, 57, 56);
+    color: var(--dark_grey);
 }
 
 p {
@@ -67,15 +73,14 @@ p {
 header {
     width: 100vw;
     height: 6vh;
-    background: linear-gradient(30deg, rgb(80, 80, 80) 0%, rgb(58, 57, 56) 100%);
+    background: var(--dark_gradient);
 }
 
 /* Nav ===================================================================== */
 .nav {
     position: fixed;
-    background: linear-gradient(30deg, rgb(80, 80, 80) 0%, rgb(58, 57, 56) 100%);
-    /* color: rgb(85, 192, 174); */
-    color: rgb(58, 57, 56);
+    background: var(--dark_gradient);
+    color: var(--dark_grey);
     top: 0;
     bottom: 0;
     left: 0;
@@ -114,7 +119,7 @@ header {
     cursor: pointer;
     position: absolute;
     right: 1rem;
-    top: 1rem;
+    top: 0.8rem;
     z-index: 1000;
 }
 /* Burger when open ================================================== */
@@ -128,7 +133,7 @@ header {
     transform: rotate(0.625turn);
 }
 .nav_open .hamburger::before {
-    transform: rotate(90deg) translateX(-6px);
+    transform: rotate(90deg) translateX(-8px);
 }
 .nav_open .hamburger::after {
     opacity: 0;
@@ -141,10 +146,10 @@ header {
 .hamburger,
 .hamburger::before,
 .hamburger::after {
-    background: rgb(85, 192, 174);
+    background: var(--light_accent);
     width: 2rem;
-    height: 3px;
-    border-radius: 1rem;
+    height: 4px;
+    /* border-radius: 1rem; */
     transition: transform 250ms ease-in-out;
 }
 .hamburger::before,
@@ -154,15 +159,15 @@ header {
     left: 0;
     right: 0;
 }
-.hamburger::before { top: 6px; }
-.hamburger::after { bottom: 6px; }
+.hamburger::before { top: 8px; }
+.hamburger::after { bottom: 8px; }
 
 /* =========================================================================================
     Hero
 ========================================================================================= */
 #hero_container {
     padding: 5vh 5vw;
-    background: linear-gradient(30deg, rgb(167, 167, 167) 0%, rgb(190, 190, 190) 100%);
+    background: var(--light_gradient);
 }
 
 .hero {
@@ -188,9 +193,7 @@ header {
 #hero_back {
     width: 87vw;
     height: 34vw;
-    /* background: rgb(36, 131, 115); */
-    background: linear-gradient(220deg, rgb(85, 192, 174) 0%, rgb(36, 131, 115) 100%);
-    /* background: linear-gradient(30deg, rgb(167, 167, 167) 0%, rgb(190, 190, 190) 100%); */
+    background: var(--accent_gradient);
     position: absolute;
     top: 1vw;
     left: 1vw;
@@ -204,7 +207,7 @@ header {
     
     width: 90vw;
     height: 35vw;
-    background: linear-gradient(30deg, rgb(80, 80, 80) 0%, rgb(58, 57, 56) 100%);
+    background: var(--dark_gradient);
     clip-path: polygon(0 0, 0% 100%, 100% 100%);
     position: absolute;
     top: 0vw;
@@ -220,7 +223,7 @@ header {
 }
 #name {
     /* font-size: 4vw; */
-    color: rgb(85, 192, 174);
+    color: var(--light_accent);
 }
 
 /* =========================================================================================
@@ -228,7 +231,7 @@ header {
 ========================================================================================= */
 #abstract {
     width: 100vw;
-    background: linear-gradient(30deg, rgb(80, 80, 80) 0%, rgb(58, 57, 56) 100%);
+    background: var(--dark_gradient);
     padding: 5vh 10vw;
     font-size: 1rem;
     color: white;
@@ -237,7 +240,7 @@ header {
     font-size: 2rem;
     font-weight: 900;
     margin-bottom: 1rem;
-    color: rgb(85, 192, 174);
+    color: var(--light_accent);
 }
 
 /* =========================================================================================
@@ -249,7 +252,7 @@ header {
     justify-content: space-evenly;
     align-items: center;
     width: 100vw;
-    background: linear-gradient(30deg, rgb(167, 167, 167) 0%, rgb(190, 190, 190) 100%);
+    background: var(--light_gradient);
 }
 
 #titles_container {
@@ -259,17 +262,17 @@ header {
 #projects_container_title {
     font-size: 2rem;
     font-weight: 900;
-    color: rgb(58, 57, 56);
+    color: var(--dark_grey);
     margin-bottom: 0.5rem;
 }
 #projects_container_subtitle {
     font-size: 1.2rem;
     font-weight: 700;
-    color: rgb(27, 116, 101);
+    color: var(--dark_accent);
 }
 
 .project_card {
-    background: rgb(255, 255, 255);
+    background: white;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -308,13 +311,14 @@ ul {
 
 a {
     all: unset;
+    cursor: pointer;
     margin: 0.5rem;
     padding: 0.5rem 1rem;
-    background: linear-gradient(220deg, rgb(85, 192, 174) 0%, rgb(36, 131, 115) 100%);
+    background: var(--accent_gradient);
     border-radius: 999px;
     /* box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.445); */
     filter: drop-shadow(-2px 3px 3px rgba(50, 50, 0, 0.5));
-    color: rgb(54, 54, 53);
+    color: var(--dark_grey);
     font-weight: 700;
 }
 
@@ -327,7 +331,7 @@ a {
     justify-content: space-around;
     align-items: center;
     width: 100vw;
-    background: linear-gradient(30deg, rgb(80, 80, 80) 0%, rgb(58, 57, 56) 100%);
+    background: var(--dark_gradient);
     padding: 5vh 10vw;
     font-size: 1rem;
     color: white;
@@ -336,12 +340,13 @@ a {
     font-size: 1.8rem;
     font-weight: 900;
     margin-bottom: 1rem;
-    color: rgb(85, 192, 174);
+    color: var(--light_accent);
 }
 
 #social_links_container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     padding-top: 3vh;
 }
 #contact_link {
@@ -349,7 +354,7 @@ a {
 }
 .social_link {
     text-align: center;
-    width: 35%;
+    width: calc(50% - 3rem);
     margin-bottom: 2vh;
 }
 
@@ -358,6 +363,13 @@ a {
 ========================================================================================= */
 footer {
     width: 100vw;
-    height: 10vh;
-    background: linear-gradient(30deg, rgb(167, 167, 167) 0%, rgb(190, 190, 190) 100%);
+    height: 15vh;
+    background: var(--light_gradient);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer > a {
+    width: 15%;
+    text-align: center;
 }
