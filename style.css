@@ -1,15 +1,36 @@
 /* =============================================================================
     SUMMARY
 
+    Custom properties
+
     General styling
 
     Header
 
+    Hero
+
+    Abstract
+
     Project cards
+
+    Contact me
 
     Footer
 
 ============================================================================== */
+
+/* =========================================================================================
+    Custom properties
+========================================================================================= */
+:root {
+    --light_grey: rgb(190, 190, 190);
+    --dark_grey: rgb(60, 60, 60);
+    --light_gradient: linear-gradient(30deg, rgb(165, 165, 165) 0%, rgb(190, 190, 190) 100%);
+    --dark_gradient: linear-gradient(30deg, rgb(80, 80, 80) 0%, rgb(60, 60, 60) 100%);
+    --light_accent: rgb(85, 190, 175);
+    --dark_accent: rgb(35, 130, 115);
+    --accent_gradient: linear-gradient(220deg, rgb(85, 190, 175) 0%, rgb(35, 130, 115) 100%);
+}
 
 /* =========================================================================================
     General styling
@@ -22,8 +43,6 @@
 }
 
 body {
-    /* outline: 1px solid magenta; */
-    /* background-color: rgb(64, 88, 153); */
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -31,9 +50,6 @@ body {
     min-height: 100vh;
 }
 
-/* h1 {
-    font-size: 2rem;
-} */
 h2 {
     font-size: 2rem;
     font-weight: 900;
@@ -50,33 +66,112 @@ p {
 ========================================================================================= */
 header {
     width: 100vw;
-    height: 5vh;
+    height: 6vh;
     background: linear-gradient(30deg, rgb(80, 80, 80) 0%, rgb(58, 57, 56) 100%);
 }
+
+/* Nav ===================================================================== */
+.nav {
+    position: fixed;
+    background: linear-gradient(30deg, rgb(80, 80, 80) 0%, rgb(58, 57, 56) 100%);
+    /* color: rgb(85, 192, 174); */
+    color: rgb(58, 57, 56);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+
+    transform: translateX(100%);
+    transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
+}
+.nav_list {
+    list-style: none;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+.nav_link {
+    color: inherit;
+    font-weight: 700;
+    font-size: 2rem;
+    text-decoration: none;
+}
+.nav_link:hover {
+    border: 2px solid var(--light_grey);
+    color: var(--light_grey);
+}
+
+/* Nav toggle =============================================================== */
+.nav_toggle {
+    padding: 0.5rem;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    z-index: 1000;
+}
+/* Burger when open ================================================== */
+.nav_open .nav {
+    transform: translateX(0);
+}
+.nav_open .nav_toggle {
+    position: fixed;
+}
+.nav_open .hamburger {
+    transform: rotate(0.625turn);
+}
+.nav_open .hamburger::before {
+    transform: rotate(90deg) translateX(-6px);
+}
+.nav_open .hamburger::after {
+    opacity: 0;
+}
+/* Burger when closed ======================================================= */
+.hamburger {
+    display: block;
+    position: relative;
+}
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    background: rgb(85, 192, 174);
+    width: 2rem;
+    height: 3px;
+    border-radius: 1rem;
+    transition: transform 250ms ease-in-out;
+}
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+.hamburger::before { top: 6px; }
+.hamburger::after { bottom: 6px; }
 
 /* =========================================================================================
     Hero
 ========================================================================================= */
 #hero_container {
-    padding: 5vh 10vw;
+    padding: 5vh 5vw;
     background: linear-gradient(30deg, rgb(167, 167, 167) 0%, rgb(190, 190, 190) 100%);
 }
 
 .hero {
-    /* outline: 1px solid magenta; */
     display: flex;
-    /* flex-direction: column; */
     justify-content: space-evenly;
     align-items: center;
     width: 90vw;
     height: 39vw;
-    /* min-height: 20vh; */
-    /* background: red; */
-    /* margin-bottom: 5vh; */
-    /* margin: 5vh 10vw; */
-    /* padding: 2vw; */
     position: relative;
-    
 }
 
 #hero_img {
@@ -109,7 +204,6 @@ header {
     
     width: 90vw;
     height: 35vw;
-    /* background: rgb(58, 57, 56); */
     background: linear-gradient(30deg, rgb(80, 80, 80) 0%, rgb(58, 57, 56) 100%);
     clip-path: polygon(0 0, 0% 100%, 100% 100%);
     position: absolute;
@@ -135,7 +229,6 @@ header {
 #abstract {
     width: 100vw;
     background: linear-gradient(30deg, rgb(80, 80, 80) 0%, rgb(58, 57, 56) 100%);
-    /* margin-bottom: 7vh; */
     padding: 5vh 10vw;
     font-size: 1rem;
     color: white;
@@ -156,7 +249,6 @@ header {
     justify-content: space-evenly;
     align-items: center;
     width: 100vw;
-    /* padding: 7vh; */
     background: linear-gradient(30deg, rgb(167, 167, 167) 0%, rgb(190, 190, 190) 100%);
 }
 
@@ -174,28 +266,22 @@ header {
     font-size: 1.2rem;
     font-weight: 700;
     color: rgb(27, 116, 101);
-    /* margin-bottom: 1rem; */
 }
 
 .project_card {
-    /* outline: 1px solid magenta; */
-    /* border: 1px solid grey; */
-    /* border-radius: 10px; */
     background: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    width: 90vw;
+    width: 80vw;
     margin-bottom: 7vh;
     /* box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.445); */
     filter: drop-shadow(-2px 3px 3px rgba(50, 50, 0, 0.5));
 }
 
 .project_img {
-    /* outline: 1px solid blue; */
     width: 100%;
-    /* border-radius: 10px 10px 0 0; */
 }
 
 .project_content {
@@ -242,7 +328,6 @@ a {
     align-items: center;
     width: 100vw;
     background: linear-gradient(30deg, rgb(80, 80, 80) 0%, rgb(58, 57, 56) 100%);
-    /* margin-bottom: 7vh; */
     padding: 5vh 10vw;
     font-size: 1rem;
     color: white;
@@ -254,11 +339,25 @@ a {
     color: rgb(85, 192, 174);
 }
 
+#social_links_container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 3vh;
+}
+#contact_link {
+    width: 100%;
+}
+.social_link {
+    text-align: center;
+    width: 35%;
+    margin-bottom: 2vh;
+}
+
 /* =========================================================================================
     Footer
 ========================================================================================= */
 footer {
     width: 100vw;
-    height: 5vh;
-    background: linear-gradient(30deg, rgb(80, 80, 80) 0%, rgb(58, 57, 56) 100%);
+    height: 10vh;
+    background: linear-gradient(30deg, rgb(167, 167, 167) 0%, rgb(190, 190, 190) 100%);
 }
