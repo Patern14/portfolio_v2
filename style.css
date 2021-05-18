@@ -426,7 +426,7 @@ a {
     .project_card {
         justify-content: flex-start;
         width: 40vw;
-        min-height: 68vh;
+        height: 78vh;
     }
     .project_title {
         font-size: 2rem;
