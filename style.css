@@ -322,7 +322,7 @@ header {
 #abstract {
     width: 100vw;
     background: var(--dark_gradient);
-    padding: 5vh 10vw;
+    padding: 8vh 10vw;
     font-size: 1rem;
     color: white;
 }
@@ -334,7 +334,7 @@ header {
 }
 @media (min-width: 700px) {
     #abstract {
-        padding: 5vh 20vw;
+        padding: 8vh 20vw;
     }
     #abstract > h1 {
         font-size: 3rem;
@@ -347,7 +347,7 @@ header {
 } */
 @media (min-width: 1401px) {
     #abstract {
-        padding: 5vh 25vw;
+        padding: 8vh 25vw;
     }
 }
 
