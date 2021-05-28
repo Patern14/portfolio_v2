@@ -31,6 +31,8 @@
 :root {
     --light_grey: rgb(190, 190, 190);
     --light_gradient: linear-gradient(30deg, rgb(165, 165, 165) 0%, rgb(190, 190, 190) 100%);
+    --lighter_gradient: linear-gradient(30deg, rgb(190, 190, 190) 0%, rgb(255, 255, 255) 100%);
+    --white_gradient: linear-gradient(30deg, rgb(230, 230, 230) 0%, rgb(255, 255, 255) 100%);
 
     --dark_grey: rgb(60, 60, 60);
     --dark_gradient: linear-gradient(30deg, rgb(80, 80, 80) 0%, rgb(60, 60, 60) 100%);
@@ -588,35 +590,57 @@ a:active {
 .form {
     display: flex;
     flex-direction: column;
-    margin: 2rem;
-    padding: 2rem;
+    margin: 2rem 0rem;
+    padding: 1rem;
+    /* border: 2px solid var(--light_accent); */
     border-radius: 10px;
+    width: 100%;
+    
+    
 }
 
 .form_element {
-    margin: 1rem;
+    margin: 1rem 0rem;
+    filter: drop-shadow(-2px 3px 3px rgba(50, 50, 0, 0.5));
+    font-size: 1rem;
+    background: var(--lighter_gradient);
+}
+.form_element:hover,
+.form_element:focus {
+    background: var(--white_gradient);
 }
 
 .form > input {
     padding: 1rem;
 }
-.form > button {
-    padding: 1rem 2rem;
+.form > input::placeholder {
+    color: var(--dark_grey);
 }
 
-.form.one {
-    border: 2px solid red;
+#textarea {
+    padding: 1rem;
+    height: 10rem;
+    width: 100%;
 }
-.form.two {
-    border: 2px solid purple;
+
+#submit_button {
+    padding: 1rem 2rem;
+    font-weight: 700;
+    line-height: 1.5;
 }
+#submit_button:hover,
+#submit_button:focus {
+    background: var(--accent_gradient);
+    font-weight: 900;
+}
+
 
 /* =========================================================================================
     Footer
 ========================================================================================= */
 footer {
     width: 100vw;
-    height: 8rem;
+    /* height: 8rem; */
     background: var(--light_gradient);
     display: flex;
     justify-content: center;

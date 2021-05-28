@@ -173,28 +173,26 @@
 
     <section id="contact_me">
         <h1>Want to know more?</h1>
-        <p>If you have any questions, if you want to know more about me, you can contact me or click on the following links.</p>
+        <p>If you have any questions, if you want to know more about me, you can contact me.</p>
+        <form class="form one" action="https://formsubmit.co/paternmalle@gmail.com" method="POST">
+            <input type="hidden" name="_captcha" value="false">
+            <input class="form_element" type="text" name="name" required placeholder="name">
+            <textarea class="form_element" id="textarea" type="textarea" name="text_message" required placeholder="message"></textarea>
+            <input class="form_element" type="email" name="email_replyto" required placeholder="email">
+            <input type="hidden" name="_next" value="https://patern14.github.io/portfolio_v2/pages/thank_you.html">
+            <button class="form_element" id="submit_button" type="submit">Send</button>
+       </form>
+        
+    </section>
+
+    <footer>
         <div id="social_links_container">
-            <a href="mailto:paternmalle@gmail.com" class="social_link" id="contact_link">Contact me</a>
+            <!-- <a href="mailto:paternmalle@gmail.com" class="social_link" id="contact_link">Contact me</a> -->
             <a href="https://www.linkedin.com/in/paterne-malle-57bb4818a/" class="social_link">Linkedin</a>
             <a href="https://github.com/Patern14" class="social_link">Github</a>
             <a href="assets/Resume02.pdf" class="social_link">CV</a>
             <a href="" class="social_link"><del>My journey</del></a>
         </div>
-    </section>
-
-    <section id="contact_form">
-        <form class="form one" action="https://formsubmit.co/paternmalle@gmail.com" method="POST">
-            <input type="hidden" name="_captcha" value="false">
-            <input class="form_element" type="text" name="name" required placeholder="name">
-            <input class="form_element" type="textarea" name="text_message" required placeholder="message">
-            <input class="form_element" type="email" name="email_replyto" required placeholder="email">
-            <input type="hidden" name="_next" value="https://patern14.github.io/portfolio_v2/pages/thank_you.html">
-            <button class="form_element" type="submit">Send</button>
-       </form>
-    </section>
-
-    <footer>
         <a href="#header">Up</a>
     </footer>
 
