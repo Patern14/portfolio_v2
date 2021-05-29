@@ -59,8 +59,13 @@ body {
 }
 
 .thank_you_letter {
-    font-size: 7rem;
+    font-size: 10vw;
     transform: scale(0);
+}
+@media (max-width: 1080px) {
+    .thank_you_letter {
+        font-size: 16vw;
+    }
 }
 #t_letter {
     animation: letter_pop 0.2s 0.2s linear forwards;
@@ -123,10 +128,15 @@ body {
 ========================================================================================= */
 footer {
     font-family: 'Roboto', sans-serif;
-    font-size: 2rem;
+    font-size: 3vw;
     position: fixed;
     bottom: 0;
     padding: 8vh 0;
+}
+@media (max-width: 1080px) {
+    footer {
+        font-size: 5vw;
+    }
 }
 
 #follow_me {
@@ -138,7 +148,7 @@ footer {
 }
 
 .social_link > img {
-    margin-left: 2rem;
+    margin-left: 2vw;
     width: 4rem;
 }
 .social_link > img:hover,
