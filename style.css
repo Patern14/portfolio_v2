@@ -713,7 +713,7 @@ footer > a:active {
 
 #img_journey {
     padding: 4px;
-    border: 2px double transparent;
+    border: 2px solid transparent;
     border-radius: 5px;
 }
 #img_journey:hover,
