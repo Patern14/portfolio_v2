@@ -454,20 +454,21 @@ a {
     background: var(--accent_gradient);
     border: 1px solid var(--light_accent);
     border-radius: 999px;
-    /* box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.445); */
     filter: drop-shadow(-2px 3px 3px rgba(50, 50, 0, 0.5));
-    /* color: var(--dark_grey); */
     color: white;
     font-size: 1rem;
     font-weight: 700;
 }
-a:hover, 
-a:focus {
+.project_link:hover,
+.project_link:focus,
+.project_github_link:hover,
+.project_github_link:focus {
     border: 1px solid var(--light_grey);
     color: var(--light_grey);
     transform: scale(1.05);
 }
-a:active {
+.project_link:focus:active,
+.project_github_link:active {
     transform: translateY(3px);
 }
 @media (min-width: 700px) and (max-width: 1080px) {
@@ -546,9 +547,6 @@ a:active {
     
     color: var(--light_accent);
 }
-/* #contact_me > p {
-    margin: 0rem 15vw 0rem 15vw;
-} */
 
 #social_links_container {
     display: flex;
@@ -591,8 +589,6 @@ a:active {
     display: flex;
     flex-direction: column;
     margin: 1rem 0rem;
-    /* padding: 1rem; */
-    /* border: 2px solid var(--light_accent); */
     border-radius: 10px;
     width: 100%;
 }
@@ -641,8 +637,10 @@ footer {
     /* height: 8rem; */
     background: var(--light_gradient);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 5vh 0;
 }
 footer > a {
     display: flex;
@@ -650,6 +648,7 @@ footer > a {
     align-items: center;
     /* width: 3rem;
     height: 3rem; */
+    margin-top: 5vh;
     padding: 1rem;
     border-radius: 999px;
 }
@@ -658,5 +657,66 @@ footer > a:focus {
     transform: scale(1.1);
 }
 footer > a:active {
-    transform: translateY(3px);
+    /* transform: translateY(3px); */
+    transform: scale(0.9);
+}
+
+/* ----------------------------------------- */
+
+#follow_me {
+    display: flex;
+    align-items: center;
+}
+.social_link {
+    all: unset;
+}
+
+.social_link > img {
+    margin: 2vw;
+    width: 4rem;
+}
+.social_link > img:hover,
+.social_link > img:focus {
+    background: var(--accent_gradient);
+}
+.social_link > img:active {
+    transform: scale(0.9);
+}
+
+#img_linkedin {
+    border: 6px double transparent;
+    border-radius: 10px;
+}
+#img_linkedin:hover,
+#img_linkedin:focus {
+    border: 6px double black;
+}
+
+#img_github {
+    border: 6px double transparent;
+    border-radius: 16px;
+}
+#img_github:hover,
+#img_github:focus {
+    border: 6px double black;
+}
+
+#img_cv {
+    padding: 4px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+}
+#img_cv:hover,
+#img_cv:focus {
+    border: 2px solid black;
+}
+
+#img_journey {
+    padding: 4px;
+    border: 2px double transparent;
+    border-radius: 5px;
+}
+#img_journey:hover,
+#img_journey:focus {
+    border: 2px solid black;
 }
