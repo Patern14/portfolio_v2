@@ -382,6 +382,7 @@ header {
 }
 
 .project_img {
+    padding: 0.5rem;
     width: 100%;
 }
 
