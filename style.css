@@ -451,7 +451,7 @@ a {
     .project_card {
         justify-content: flex-start;
         width: 40vw;
-        height: 78vh;
+        /* height: 78vh; */     /* TODO find a satisfying solution for card height on multiple devices */
     }
     .project_title {
         font-size: 2rem;
